@@ -1,12 +1,14 @@
 /* Estilos para el navbar */
 .navbar {
     position: fixed;
+    height: 10.8vh;
     z-index: 99;
     background: linear-gradient(to right, black, rgb(253, 168, 11));
 }
 
 /* Estilos para el logo */
 .logo_div {
+    margin-left: 1.5rem;
     z-index: 9;
     position: relative;
     width: 45vw;
@@ -17,6 +19,7 @@
 
 /* Estilos para el menú hamburguesa */
 .hamburguer {
+    margin-right: 1.5rem;
     z-index: 9;
     width: 30px;
     height: 3px;
@@ -48,6 +51,8 @@
 
 /* Estilos para el menú hamburguesa activo */
 .activeHamburguer {
+    margin-right: 1.5rem;
+    z-index: 9;
     width: 30px;
     height: 3px;
     border-radius: 5px;
@@ -75,9 +80,9 @@
 }
 
 .sidenav {
-    top: 0px;
+    
     right: 0px;
-    position: fixed;
+    position: relative;
     z-index: 3;
     width: 100vw;
     height: 100vh;
@@ -87,8 +92,7 @@
   }
 
 .activeSidenav {
-    margin-top: 10.8vh;
-    position: fixed;
+    position: relative;
     top: 0px;
     right: 0px;
     z-index: 3;
@@ -101,4 +105,43 @@
 
 .ul {
     list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+    gap: 10px;
+    font-size: 1.5rem;
+    text-shadow: 1px 2px 10px #010101;
   }
+
+.link {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+
+.activeLink {
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    opacity: 1;
+    transition: all 1s ease-in-out 0.5s;
+}
+
+.activeLink > li {
+    color:#fff;
+    transform: translateY(0%);
+    transition: all 0.5s ease-in-out;
+}
+
+.activeLink > li:hover {
+    color:rgb(253, 168, 11);
+    transform: translateY(-15%);
+    transition: all 0.5s ease-in-out;
+}
+
+

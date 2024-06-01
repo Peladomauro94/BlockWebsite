@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import { Pinyon_Script } from "next/font/google";
 import style from "./Navigator.module.css";
 import { useState } from "react";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function Navigator() {
   const [active, setActive] = useState(false);
 
   return (
-    <nav className={`navbar container-fluid ps-4 pe-4 ${style.navbar}`}>
+    <nav className={`navbar container-fluid ${style.navbar}`}>
       <div className={style.logo_div}>
         <Image
           src="/Logo-Block.png"
@@ -35,8 +36,11 @@ export default function Navigator() {
       </div>
       <div className={active ? style.activeSidenav : style.sidenav}>
         <ul className={style.ul}>
-          
-          
+          <Link href="/" className={active ? style.activeLink : style.link}><li>Home</li></Link>
+          <Link href="/" className={active ? style.activeLink : style.link}><li>Servicios</li></Link>
+          <Link href="/" className={active ? style.activeLink : style.link}><li>Nosotros</li></Link>
+          <Link href="/" className={active ? style.activeLink : style.link}><li>Trabaja con Nosotros</li></Link>
+          <Link href="/" className={active ? style.activeLink : style.link}><li>Contacto</li></Link>
         </ul>
       </div>
     </nav>
