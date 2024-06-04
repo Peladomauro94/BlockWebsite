@@ -8,6 +8,7 @@
 .mainDiv{
     position: relative;
     display: flex;
+    padding: 0px 10px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -35,7 +36,10 @@
 /* Center text*/
 
 .centerTextDiv{
+    margin: 15px 10px;
+    flex-wrap: wrap;
     display: flex;
+    justify-content: center;
     position: relative;
 }
 
@@ -76,7 +80,36 @@
                     padding: 0;
                     line-height: 54px;
                     overflow: visible;
-    
+                    animation: moveDownAndBack 6s ease-in infinite;
+}
+
+@keyframes moveDownAndBack {
+    0% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(0);
+      }
+
+      35% {
+        transform: translateY(-35%);
+      }
+
+      65% {
+        transform: translateY(-35%);
+      }
+
+      70% {
+        transform: translateY(-70%);
+      }
+
+      90% {
+        transform: translateY(-70%);
+      }
+
+      100% {
+        transform: translateY(0);
+      }
 }
 
 /* Final text*/

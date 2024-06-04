@@ -2,7 +2,6 @@ import { Inter } from "next/font/google";
 import Navigator from "@/Components/Navigation/Navigator";
 import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Block",
